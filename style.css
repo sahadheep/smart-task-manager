@@ -1,0 +1,115 @@
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(180deg,#e6f7ff 0%, #d0efff 100%);
+    color: #072032;
+    min-height: 100vh;
+}
+
+.container {
+    max-width: 520px;
+    margin: 48px auto;
+    background: rgba(255,255,255,0.95);
+    padding: 22px;
+    border-radius: 12px;
+    box-shadow: 0 8px 22px rgba(16,40,80,0.06);
+    border: 1px solid rgba(10,60,120,0.06);
+}
+
+h1 {
+    text-align: center;
+}
+
+.input-section {
+    display: flex;
+    gap: 10px;
+}
+
+input {
+    flex: 1;
+    padding: 12px 14px;
+    border: 1px solid rgba(255,255,255,0.12);
+    border-radius: 8px;
+    background: rgba(255,255,255,0.95);
+    color: #072032;
+    transition: box-shadow .15s, border-color .15s;
+}
+
+input:focus {
+    outline: none;
+    box-shadow: 0 6px 18px rgba(9,48,74,0.16);
+    border-color: rgba(0,0,0,0.08);
+}
+
+button {
+    padding: 10px 14px;
+    cursor: pointer;
+    border: none;
+    border-radius: 8px;
+    background: #0b63ff;
+    color: white;
+    font-weight: 600;
+    box-shadow: 0 6px 14px rgba(11,99,255,0.16);
+    transition: transform .08s ease, box-shadow .12s ease, opacity .12s;
+}
+
+button:hover { transform: translateY(-1px); }
+
+.filters {
+    display:flex;
+    gap:8px;
+    justify-content:center;
+    margin:14px 0;
+}
+
+.filters button {
+    background: transparent;
+    color: #0b3b66;
+    border: 1px solid transparent;
+    padding: 8px 12px;
+    border-radius: 8px;
+    box-shadow:none;
+}
+
+.filters button:hover { background:#f3f7f9; }
+
+/* Make the primary Add button slightly larger than filter buttons */
+.input-section > button { background: #1fa36a; color: #fff; }
+
+li {
+    margin-top: 12px;
+    padding: 10px 12px;
+    background: #f8fbfb;
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    justify-content: space-between;
+    border-radius: 8px;
+    border: 1px solid #eef4f6;
+    transition: transform .06s ease, box-shadow .08s ease;
+}
+
+li:hover { transform: translateY(-2px); box-shadow: 0 6px 14px rgba(38,50,56,0.04); }
+
+/* Completed state: use green color and subtle background, remove line-through */
+.completed {
+    text-decoration: none;
+    color: #0f5f2b;
+    background: #e9f8ee;
+    border-left: 4px solid #19a65f;
+}
+
+/* Ensure task text uses full width and wraps */
+li span { display:block; word-break:break-word; }
+
+/* Delete button styling */
+li button {
+    background: #ff5b5b;
+    border: none;
+    color: #fff;
+    padding: 6px 8px;
+    border-radius: 6px;
+    cursor:pointer;
+}
+
+li button:hover { opacity: .95; transform: translateY(-1px); }
